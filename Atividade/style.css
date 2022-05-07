@@ -1,0 +1,79 @@
+.row{
+    height: 700px;
+}
+
+form{
+    align-items: center;
+    justify-content: center;
+}
+.col-md{
+    display: flex;
+    padding-top: 40px;
+    /* align-items: center; */
+    justify-content: center;
+    justify-items: center;
+}
+.form-control:not([type="color"]){
+    width: 400px;
+}
+
+.form-control-color{
+    display: inline-block;
+    
+}
+
+input[type="checkbox"]{
+    padding: 6px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background: #D39C41;
+    border-radius: 4px;
+    height: 32px;
+    width: 200px;
+    color: #7C5223;
+    font-family: Arial, Helvetica, sans-serif;
+
+    border: 0;
+}
+
+.form-check-input:checked{
+    background-color: #D39C41;
+    border-color: #D39C41;
+    outline:none !important;
+}
+
+.form-check-input:focus{
+    box-shadow: 0 0 0 0.25em rgba(124,82, 32, 25%);
+}
+
+
+.form-control:focus, .form-select:focus{
+    box-shadow: 0 0 0 0.25em rgba(14,14, 17, 25%);
+
+}
+
+
+label{
+    color: #909192
+}
+
+.form-control:not([type="color"]), .form-select{
+    background-color: #121216;
+    box-shadow: 0 0 0 0.25em rgba(14,14, 17, 50%);
+    border: 0;
+    color: whitesmoke;
+}
+
+
+
+#col-right{
+    background-color:  #121216;
+    color: whitesmoke;
+}
+
+#col-left{
+    background-color: rgba(14, 14, 17);
+    color: whitesmoke;
+}

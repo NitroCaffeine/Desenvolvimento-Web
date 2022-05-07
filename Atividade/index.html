@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+   
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md" id="col-right">
+                <form>
+                    <label for="Nome_Completo">Nome Completo:</label><br>
+                    <input type="text" id="Nome_Completo" name="Nome_Completo" class="form-control"><br>
+
+
+
+                    <label for="Telefone">Telefone:</label><br>
+                    <input type="tel" id="Telefone" name="Telefone" class="form-control"><br>
+
+                    <label for="Sexo">Sexo</label><br>
+                    <input type="radio" id="Feminino" name="Feminino" class="form-check-input">
+                    <label for="Feminino">Feminino</label>
+                    <input type="radio" id="Masculino" name="Masculino" class="form-check-input">
+                    <label for="Masculino">Masculino</label><br><br>
+
+                    <label for="UF_Nascimento">UF de Nascimento</label><br>
+                    <select class="form-select">
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="PB">PB</option>
+                        <option value="PE">PE</option>
+                        <option value="CE">CE</option>
+                    </select><br>
+
+                    <label for="Data">Informe uma data especial</label><br>
+                    <input type="date" id="Data" name="Data" class="form-control"><br>
+
+                    <label for="Qtd_pessoas">Quantas pessoas tem na sua família?</label><br>
+                    <input type="number" id="Qtd_pessoas" name="Qtd_pessoas" class="form-control"><br>
+
+                    <label for="foto">Envie uma foto de perfil</label><br><br>
+                    <input type="file"><br><br>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+
+                </form>
+            </div>
+            <div class="col-md" id="col-left">
+                <form>
+                    <label for="Email">Email:</label><br>
+                    <input type="email" id="Email" name="Email" class="form-control" placeholder="name@example.com"><br>
+                    <label for="Senha">Senha:</label><br>
+                    <input type="password" id="Senha" name="Senha" class="form-control" placeholder="**********"><br>
+
+                    <label for="Nascimento">Date e Hora de Nascimento</label><br>
+                    <input type="datetime-local" id="Nascimento" name="Nascimento" class="form-control"><br>
+
+                    <label for="Cor">Selecione sua cor favorita</label>
+                    
+                    <input type="color" id="Cor" name="Cor" class="form-control-color"><br><br>
+                  
+
+                    <label for="Horario">Que horas você costuma acordar?</label><br>
+                    <input type="time" id="Horario" name="Horario" class="form-control"><br>
+
+                    <label for="url">Adicione a url da sua rede social</label><br>
+                    <input type="url" id="url" name="url" class="form-control"><br>
+                    <label for="Generos">Quais seus gêneros músicais favoritos</label><br><br>
+
+                    <span id="grid">                      
+
+                    </span>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        lista_generos = ["Rock", "Sertanejo", "Pagode", "Samba", "Funk", "Reggae", "Pop", "Forró", "Indie", "Gospel", "MPB", "Jazz"]
+        let _html = ""
+        lista_generos.forEach((genero, index) => {
+            if (index + 1 == lista_generos.length / 2) {
+                _html = `<input type=checkbox id=${genero} name=${genero} class=form-check-input><label for=${genero}>${genero}</label><br><br>`
+            }
+            else {
+                _html = `<input type=checkbox id=${genero} name=${genero} class=form-check-input><label for=${genero}>${genero}</label>`
+            }
+
+            document.getElementById('grid').innerHTML += _html
+        });
+    </script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
